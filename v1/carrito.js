@@ -31,5 +31,9 @@
         if(e.shiftKey&&i<=0){e.preventDefault();f[f.length-1].focus()}else if(!e.shiftKey&&i===f.length-1){e.preventDefault();f[0].focus()}}});
   }
   if(d.readyState==='loading')d.addEventListener('DOMContentLoaded',boot);else boot();
-  w.Carrito={fm:fm,toast:toast,copy:copy,flash:flash,sheet:sheet,version:'1'};
+  var notes={
+    flavor:{es:'Te escribimos para confirmar el sabor.',en:'We message you to confirm the flavor.'},
+    drink:{es:'Te escribimos para confirmar la bebida.',en:'We message you to confirm the drink.'}
+  };
+  w.Carrito={fm:fm,toast:toast,copy:copy,flash:flash,sheet:sheet,notes:notes,version:'1'};
 })(window);
