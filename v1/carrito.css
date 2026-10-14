@@ -1,0 +1,86 @@
+/* Carrito Soda La Bomba, Pollos La Bomba y Papea. Un solo archivo: lo que se cambia aquí aplica a todos. */
+/* menú en lista y hoja de opciones */
+.pl{display:flex;flex-direction:column;max-width:760px}
+.pr{display:flex;gap:14px;align-items:center;padding:14px 0;border-bottom:1px solid var(--line)}
+.pr .t{flex:1;min-width:0}.pr b{display:block;font-size:19px;font-weight:800;color:var(--red);line-height:1.2}
+.pr small{display:block;color:var(--muted);font-size:15px;line-height:1.35;margin-top:2px}
+.pr .pad{position:relative;flex:none;width:48px;height:48px;border-radius:50%;border:0;background:var(--red);color:var(--red-ink);font:800 28px/1 var(--body);cursor:pointer;display:flex;align-items:center;justify-content:center}
+.pr .bd{position:absolute;top:-6px;right:-6px;min-width:22px;height:22px;padding:0 5px;border-radius:11px;background:var(--fg);color:var(--bg);font:800 13px/22px var(--body);text-align:center}
+.shw{position:fixed;inset:0;z-index:40;display:flex;align-items:flex-end;justify-content:center;background:rgba(0,0,0,.55)}
+.shw[hidden]{display:none}
+.sh{--bg:#FBF4EA;--fg:#171212;--muted:#4A3F3F;--line:#E6DDD3;--red:#B81622;width:100%;max-width:560px;max-height:92vh;overflow-y:auto;background:var(--bg);color:var(--fg);border-radius:22px 22px 0 0;padding:16px 20px 0}
+.sh .gr{width:44px;height:5px;border-radius:3px;background:var(--line);margin:0 auto 12px}
+.sh .hh{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+.sh h2{font-size:28px;color:var(--red);text-transform:none;margin:0}
+.sh .x{flex:none;width:44px;height:44px;margin:-6px -8px 0 0;border:0;background:transparent;color:var(--fg);font:400 30px/1 var(--body);cursor:pointer}
+.sh .dd{margin:2px 0 4px;color:var(--muted);font-size:15px}
+.sh .stp{display:flex;align-items:center;gap:8px;margin:14px 0 6px;font-weight:800;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.sh .stp i{width:22px;height:22px;border-radius:50%;background:var(--fg);color:var(--bg);font-style:normal;display:inline-flex;align-items:center;justify-content:center;font-size:12px;letter-spacing:0}
+.rop{display:flex;gap:12px;align-items:center;width:100%;text-align:left;min-height:56px;padding:10px 12px;margin-bottom:8px;border:2px solid var(--line);border-radius:14px;background:transparent;color:var(--fg);font:inherit;cursor:pointer}
+.rop[aria-checked="true"]{border-color:var(--red);background:rgba(184,22,34,.08)}
+.rop .rd{flex:none;width:22px;height:22px;border-radius:50%;border:2px solid var(--fg);display:flex;align-items:center;justify-content:center}
+.rop[aria-checked="true"] .rd{border-color:var(--red)}.rop[aria-checked="true"] .rd::after{content:"";width:12px;height:12px;border-radius:50%;background:var(--red)}
+.rop .dot{width:14px;height:14px;border-radius:50%;flex:none;border:1px solid rgba(0,0,0,.25)}
+.rop .dot.d0{background:#C8102E}.rop .dot.d1{background:#F28C28}.rop .dot.d2{background:#5DB75B}.rop .dot.d3{background:#F3C623}.rop .dot.d4{background:transparent;border:2px solid currentColor;opacity:.6}
+.rop b{display:block;font-size:16px}.rop small{display:block;color:var(--muted);font-size:14px;line-height:1.3}
+.sh .ft{display:flex;gap:12px;align-items:center;margin-top:10px;position:sticky;bottom:0;background:var(--bg);padding:12px 0 calc(16px + env(safe-area-inset-bottom,0px));box-shadow:0 -10px 10px -10px rgba(0,0,0,.18)}
+.sh .qq{display:flex;align-items:center;border:2px solid var(--fg);border-radius:12px}
+.sh .qq button{width:44px;height:48px;border:0;background:transparent;color:var(--fg);font:800 22px var(--body);cursor:pointer}
+.sh .qq output{min-width:28px;text-align:center;font-weight:800;font-size:19px}
+.sh .go{flex:1;min-height:52px;border-radius:12px;border:2px solid var(--red);background:var(--red);color:var(--red-ink);font:800 17px var(--body);cursor:pointer}
+body.shopen{overflow:hidden}
+/* carrito: mismo diseño en todos los sitios, colores claros */
+section.ord{color-scheme:light;max-width:none;margin:0;padding:48px 20px;--bg:#FBF4EA;--fg:#171212;--muted:#4A3F3F;--line:#E6DDD3;--red:#B81622;background:var(--bg);color:var(--fg)}
+section.ord>*{max-width:760px;margin-left:auto;margin-right:auto}
+section.ord h2{font-size:clamp(40px,8vw,64px);text-align:center;margin:0 auto 18px;line-height:1;color:var(--fg)}
+.ord form.order{background:none;padding:0;border-radius:0;display:block}
+.ord .mode{border:2px solid var(--gold);border-radius:14px;padding:12px 14px;margin:0 0 14px}
+.ord .mode legend{font-weight:800;padding:0 6px;margin:0}
+.ord .mo{display:flex;gap:10px;align-items:flex-start;padding:8px 0;min-height:0}
+.ord .mo input{margin-top:5px}.ord .mo b{display:block}
+.ord .ban{margin:0 0 14px}
+.ord .facts{margin:0 auto 18px;padding-left:22px;font-size:15px}
+.ord .box{margin-top:32px;border:2px solid var(--gold);border-radius:16px;padding:8px 18px 22px;background:#fff}
+.ord .facts{background:none;color:inherit;font-weight:400;text-align:left;padding-block:0;padding-right:0}
+.ord .emp a{text-decoration:none}
+.ord .emp{font-size:21px;font-weight:700;text-align:center;margin:22px 0}
+.ord .frm{display:grid;gap:12px;margin:8px 0 18px}
+.ord .frm label{display:grid;gap:4px;font-weight:700;font-size:15px}
+.ord .frm input,.ord .frm textarea,.ord .frm select{font:400 17px var(--body);padding:10px 12px;border-radius:10px;border:2px solid var(--fg);background:#fff;color:var(--fg);min-height:44px}
+.ord .frm textarea{min-height:0}
+.ord .frm label[hidden]{display:none}
+.ord .btns{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.ord .foot{margin-top:18px;font-size:15px;text-align:center;color:var(--fg)}
+/* homologado Soda y Papea */
+.ord .mo input{accent-color:var(--red)}
+.ord .mo b{font-size:17px;font-weight:700}
+.ord .btn{padding:0 30px}
+.ord .ctl button{color:var(--red);border-color:var(--red)}
+.ord .cl .rm{min-height:44px;padding:0 12px 0 0;font-size:14px;font-weight:700;color:var(--red);text-decoration:underline}
+.ord .pay .pl{color:var(--red)}
+.ord .pay .pt{color:var(--muted)}
+.ord .foot:empty{display:none}
+.ord .miss{margin:0 0 12px}
+.ord .cl .rm{color:var(--red)}
+.ord .tot{display:flex;justify-content:space-between;font-weight:800;font-size:19px;padding:14px 0}
+#rep0{margin:0 0 12px}#rep0[hidden]{display:none}
+.ord .cl .cn{grid-column:1}
+.ord .cl .pp{grid-column:2;font-weight:800;text-align:right}
+.ord .cl .cn .lb{display:block}
+.ord .cl .cn .lb{font-size:14px;opacity:.85}
+.ord .cl .ctl{grid-column:2;grid-row:2}
+.ord .cl .rm{grid-column:1;grid-row:2;align-self:center}
+.sr{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+/* extras de Soda (variantes, filas de menú) */
+.ord .ban{background:#fff1d2;color:var(--fg);border-color:var(--gold)}
+.ord .facts{opacity:1}
+.ord .cl{border-bottom-color:var(--line)}
+.ord .cl .rm,.ord .op .pr,.ord .pay .pl,.ord .it .np,.ord .rs .np{color:var(--red)}
+.ord .miss{background:#fde8ea;border-color:var(--red);color:#7a0d16}
+.sh h2{font-family:var(--display);font-weight:800;line-height:1.05}
+.rop .rl{flex:1;min-width:0}.rop .rl b::first-letter{text-transform:uppercase}.rop .rp{margin-left:auto;font-weight:800;color:var(--red);white-space:nowrap}
+.add.vo{position:relative}.add.vo .bd{position:absolute;top:-9px;right:-9px;min-width:22px;height:22px;padding:0 5px;border-radius:11px;background:#fff;color:#171212;font:800 13px/22px var(--body);text-align:center}
+.ord .foot{color:var(--fg);opacity:1}
+.toast{position:fixed;left:50%;transform:translateX(-50%);bottom:84px;z-index:50;background:#0E0A0A;color:#fff;border:1px solid #4a3d3d;font-weight:700;padding:12px 18px;border-radius:12px;max-width:calc(100% - 32px);text-align:center;box-shadow:0 6px 24px rgba(0,0,0,.35)}
+.toast[hidden]{display:none}
+.ord .cl .ctl{justify-self:end}
