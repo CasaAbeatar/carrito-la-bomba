@@ -34,11 +34,11 @@ section.ord{color-scheme:light;max-width:none;margin:0;padding:48px 20px;--bg:#F
 section.ord>*{max-width:760px;margin-left:auto;margin-right:auto}
 section.ord h2{font-size:clamp(40px,8vw,64px);text-align:center;margin:0 auto 18px;line-height:1;color:var(--fg)}
 .ord form.order{background:none;padding:0;border-radius:0;display:block}
-.ord .mode{border:2px solid var(--gold);border-radius:14px;padding:12px 14px;margin:0 0 14px}
+.ord .mode{border:2px solid var(--gold);border-radius:14px;padding:12px 14px;margin:0 auto 14px}
 .ord .mode legend{font-weight:800;padding:0 6px;margin:0}
 .ord .mo{display:flex;gap:10px;align-items:flex-start;padding:8px 0;min-height:0}
 .ord .mo input{margin-top:5px}.ord .mo b{display:block}
-.ord .ban{margin:0 0 14px}
+.ord .ban{margin:0 auto 14px}
 .ord .facts{margin:0 auto 18px;padding-left:22px;font-size:15px}
 .ord .box{margin-top:32px;border:2px solid var(--gold);border-radius:16px;padding:8px 18px 22px;background:#fff}
 .ord .facts{background:none;color:inherit;font-weight:400;text-align:left;padding-block:0;padding-right:0}
@@ -55,6 +55,8 @@ section.ord h2{font-size:clamp(40px,8vw,64px);text-align:center;margin:0 auto 18
 .ord .mo input{accent-color:var(--red)}
 .ord .mo b{font-size:17px;font-weight:700}
 .ord .btn{padding:0 30px}
+.ord #wa{min-height:64px;font-size:20px;padding:0 40px;flex:1 1 100%;max-width:440px}
+.ord #copy,.ord #pcopy{min-height:44px;font-size:15px;padding:0 18px}
 .ord .ctl button{color:var(--red);border-color:var(--red)}
 .ord .cl .rm{min-height:44px;min-width:64px;text-align:left;padding:0 12px 0 0;font-size:14px;font-weight:700;color:var(--red);text-decoration:underline}
 .ord .pay .pl{color:var(--red)}
