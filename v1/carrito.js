@@ -31,9 +31,19 @@
         if(e.shiftKey&&i<=0){e.preventDefault();f[f.length-1].focus()}else if(!e.shiftKey&&i===f.length-1){e.preventDefault();f[0].focus()}}});
   }
   if(d.readyState==='loading')d.addEventListener('DOMContentLoaded',boot);else boot();
+  /* Lleva la pantalla al dato que falta: lo centra, lo resalta y le da el foco sin saltos. Igual en las tres páginas. */
+  function goMissing(el){
+    if(!el)return;
+    var red=w.matchMedia&&w.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var box=el.closest&&(el.closest('label')||el.closest('fieldset')||el.closest('section'))||el;
+    try{box.scrollIntoView({behavior:red?'auto':'smooth',block:'center'})}catch(x){box.scrollIntoView()}
+    box.classList.remove('cl-miss');void box.offsetWidth;box.classList.add('cl-miss');
+    setTimeout(function(){box.classList.remove('cl-miss')},1800);
+    if(el.focus&&/^(INPUT|TEXTAREA|SELECT|BUTTON)$/.test(el.tagName))setTimeout(function(){try{el.focus({preventScroll:true})}catch(x){el.focus()}},red?0:380);
+  }
   var notes={
     flavor:{es:'Te escribimos para confirmar el sabor.',en:'We message you to confirm the flavor.'},
     drink:{es:'Te escribimos para confirmar la bebida.',en:'We message you to confirm the drink.'}
   };
-  w.Carrito={fm:fm,toast:toast,copy:copy,flash:flash,sheet:sheet,notes:notes,version:'1'};
+  w.Carrito={fm:fm,toast:toast,copy:copy,flash:flash,sheet:sheet,notes:notes,goMissing:goMissing,version:'1'};
 })(window);
