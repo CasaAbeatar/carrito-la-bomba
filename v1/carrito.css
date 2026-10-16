@@ -17,6 +17,7 @@
 .sh .stp{display:flex;align-items:center;gap:8px;margin:14px 0 6px;font-weight:800;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
 .sh .stp i{width:22px;height:22px;border-radius:50%;background:var(--fg);color:var(--bg);font-style:normal;display:inline-flex;align-items:center;justify-content:center;font-size:12px;letter-spacing:0}
 .rop{display:flex;gap:12px;align-items:center;width:100%;text-align:left;min-height:56px;padding:10px 12px;margin-bottom:8px;border:2px solid var(--line);border-radius:14px;background:transparent;color:var(--fg);font:inherit;cursor:pointer}
+.sh .rop{border-color:#8a7a70}
 .rop[aria-checked="true"]{border-color:var(--red);background:rgba(184,22,34,.08)}
 .rop .rd{flex:none;width:22px;height:22px;border-radius:50%;border:2px solid var(--fg);display:flex;align-items:center;justify-content:center}
 .rop[aria-checked="true"] .rd{border-color:var(--red)}.rop[aria-checked="true"] .rd::after{content:"";width:12px;height:12px;border-radius:50%;background:var(--red)}
@@ -54,9 +55,9 @@ section.ord h2{font-size:clamp(40px,8vw,64px);text-align:center;margin:0 auto 18
 /* homologado Soda y Papea */
 .ord .mo input{accent-color:var(--red)}
 .ord .mo b{font-size:17px;font-weight:700}
-.ord .btn{padding:0 30px}
-.ord #wa{min-height:64px;font-size:20px;padding:0 40px;flex:1 1 100%;max-width:440px}
-.ord #copy,.ord #pcopy{min-height:44px;font-size:15px;padding:0 18px}
+.ord .btn{padding:0 30px;text-align:center}
+.ord #wa{min-height:64px;font-size:20px;padding:0 40px;flex:1 1 100%;max-width:440px;border-color:#171212}
+.ord #copy,.ord #pcopy{min-height:38px;font-size:14px;padding:0 14px;border-width:1.5px}
 .ord .ctl button{color:var(--red);border-color:var(--red)}
 .ord .cl .rm{min-height:44px;min-width:64px;text-align:left;padding:0 12px 0 0;font-size:14px;font-weight:700;color:var(--red);text-decoration:underline}
 .ord .pay .pl{color:var(--red)}
